@@ -9,7 +9,7 @@
 	</parent>
 
 
-	<groupId>com.pru.globalpayments</groupId>
+	<groupId>com.excelsiorsoft.globalpayments</groupId>
 	<artifactId>return-data-processor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>return-data-processor</name>
