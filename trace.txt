@@ -1,0 +1,224 @@
+ .   ____          _            __ _ _
+
+/\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+
+\\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+
+=========|_|==============|___/=/_/_/_/
+
+[32m :: Spring Boot :: [39m             [2m (v2.7.14)[0;39m
+
+ 
+
+[2m2023-09-06 10:11:36.461[0;39m [32m INFO[0;39m [35m26620[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.p.g.f.d.d.a.provider.MainApplication  [0;39m [2m:[0;39m Starting MainApplication using Java 11.0.16.1 on VXABZS4H9100738 with PID 26620 (C:\code\STS\return-data-processor\target\classes started by x266345 in C:\code\STS\return-data-processor)
+
+[2m2023-09-06 10:11:36.465[0;39m [32m INFO[0;39m [35m26620[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.p.g.f.d.d.a.provider.MainApplication  [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+
+[2m2023-09-06 10:11:37.476[0;39m [32m INFO[0;39m [35m26620[0;39m [2m---[0;39m [2m[           main][0;39m [36mfaultConfiguringBeanFactoryPostProcessor[0;39m [2m:[0;39m No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+
+[2m2023-09-06 10:11:37.497[0;39m [32m INFO[0;39m [35m26620[0;39m [2m---[0;39m [2m[           main][0;39m [36mfaultConfiguringBeanFactoryPostProcessor[0;39m [2m:[0;39m No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+
+[2m2023-09-06 10:11:37.999[0;39m [33m WARN[0;39m [35m26620[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.c.a.AnnotationConfigApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aggregateItemJobConfiguration': Unsatisfied dependency expressed through field 'jobBuilderFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/abc/globalpayments/feeds/downstream/dailycashreport/acquire/provider/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.embedded.EmbeddedDatabase]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available
+
+[2m2023-09-06 10:11:38.009[0;39m [32m INFO[0;39m [35m26620[0;39m [2m---[0;39m [2m[           main][0;39m [36mConditionEvaluationReportLoggingListener[0;39m [2m:[0;39m
+
+ 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+
+[2m2023-09-06 10:11:38.048[0;39m [31mERROR[0;39m [35m26620[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+
+ 
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aggregateItemJobConfiguration': Unsatisfied dependency expressed through field 'jobBuilderFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/abc/globalpayments/feeds/downstream/dailycashreport/acquire/provider/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.embedded.EmbeddedDatabase]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available
+
+               at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:662) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:642) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921) ~[spring-context-5.3.29.jar:5.3.29]
+
+               at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.29.jar:5.3.29]
+
+               at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.14.jar:2.7.14]
+
+               at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.14.jar:2.7.14]
+
+               at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.14.jar:2.7.14]
+
+               at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164) ~[spring-boot-2.7.14.jar:2.7.14]
+
+               at com.pru.globalpayments.feeds.downstream.dailycashreport.acquire.provider.MainApplication.main(MainApplication.java:22) ~[classes/:na]
+
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/abc/globalpayments/feeds/downstream/dailycashreport/acquire/provider/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.embedded.EmbeddedDatabase]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available
+
+               at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:662) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:642) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               ... 18 common frames omitted
+
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/abc/globalpayments/feeds/downstream/dailycashreport/acquire/provider/DataSourceConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.embedded.EmbeddedDatabase]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available
+
+               at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               ... 41 common frames omitted
+
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.embedded.EmbeddedDatabase]: Factory method 'dataSource' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available
+
+               at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               ... 54 common frames omitted
+
+Caused by: java.lang.IllegalStateException: Driver for test database type [HSQL] is not available
+
+               at org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseConfigurerFactory.getConfigurer(EmbeddedDatabaseConfigurerFactory.java:57) ~[spring-jdbc-5.3.29.jar:5.3.29]
+
+               at org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory.initDatabase(EmbeddedDatabaseFactory.java:181) ~[spring-jdbc-5.3.29.jar:5.3.29]
+
+               at org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory.getDatabase(EmbeddedDatabaseFactory.java:158) ~[spring-jdbc-5.3.29.jar:5.3.29]
+
+               at org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder.build(EmbeddedDatabaseBuilder.java:283) ~[spring-jdbc-5.3.29.jar:5.3.29]
+
+               at com.pru.globalpayments.feeds.downstream.dailycashreport.acquire.provider.DataSourceConfig.dataSource(DataSourceConfig.java:19) ~[classes/:na]
+
+               at com.pru.globalpayments.feeds.downstream.dailycashreport.acquire.provider.DataSourceConfig$$EnhancerBySpringCGLIB$$f1b61753.CGLIB$dataSource$0(<generated>) ~[classes/:na]
+
+               at com.pru.globalpayments.feeds.downstream.dailycashreport.acquire.provider.DataSourceConfig$$EnhancerBySpringCGLIB$$f1b61753$$FastClassBySpringCGLIB$$398303db.invoke(<generated>) ~[classes/:na]
+
+               at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.29.jar:5.3.29]
+
+               at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.29.jar:5.3.29]
+
+               at com.pru.globalpayments.feeds.downstream.dailycashreport.acquire.provider.DataSourceConfig$$EnhancerBySpringCGLIB$$f1b61753.dataSource(<generated>) ~[classes/:na]
+
+               at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+
+               at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+
+               at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+
+               at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+
+               at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.29.jar:5.3.29]
+
+               ... 55 common frames omitted
+
+Caused by: java.lang.ClassNotFoundException: org.hsqldb.jdbcDriver
+
+               at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+
+               at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+
+               at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+
+               at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+
+               at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
+
+               at org.springframework.util.ClassUtils.forName(ClassUtils.java:284) ~[spring-core-5.3.29.jar:5.3.29]
+
+               at org.springframework.jdbc.datasource.embedded.HsqlEmbeddedDatabaseConfigurer.getInstance(HsqlEmbeddedDatabaseConfigurer.java:50) ~[spring-jdbc-5.3.29.jar:5.3.29]
+
+               at org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseConfigurerFactory.getConfigurer(EmbeddedDatabaseConfigurerFactory.java:47) ~[spring-jdbc-5.3.29.jar:5.3.29]
+
+               ... 69 common frames omitted
+
+ 
+
